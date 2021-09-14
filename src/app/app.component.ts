@@ -39,17 +39,17 @@
                 var A: string[];
                 A = ['200', '100', '50', '300', '500', '600', '300', '200'];
                 const button = document.getElementById('stop');
-                button.style = 'width:' + W[lapsNr-1] + 'px;';
+                button.style.width = W[lapsNr-1] + 'px;';
                 const space = document.getElementById('space');
-                space.style = 'width:' + A[lapsNr-1] + 'px;';
+                space.style.width = A[lapsNr-1] + 'px;';
             },
             onReset: (event, inst) => {
                 if(lapsNr > 8){
                   inst.hide();
                   const button = document.getElementById('stop');
-                  button.style = 'display: none;';
+                  button.style.display = 'none;';
                   const start = document.getElementById('start');
-                  start.style = 'display: none;';
+                  start.style.display = 'none;';
                 }
             },
             onLap: (event, inst) => {  // More info about onLap: https://docs.mobiscroll.com/4-10-9/angular/timer#event-onLap
