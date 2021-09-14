@@ -4,7 +4,7 @@
   "scripts": {
     "heroku-postbuild":"node --max_old_space_size=8000 ./node_modules/@angular/cli/bin/ng build --prod && npm install -g http-server-spa",
     "ng": "ng",
-    "start": "ng serve --port $PORT --host 0.0.0.0 --disable-host-check",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
