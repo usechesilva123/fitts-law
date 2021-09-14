@@ -1,0 +1,20 @@
+<mbsc-page theme="ios" themeVariant="light" lang="es">
+    <div [(ngModel)]="timer" mbsc-timer #myPopup="mobiscroll"
+    [mbsc-options]="timerSettings"></div>
+    <table>
+      <tr>
+        <td id="start">
+          <mbsc-button (click)="myPopup.instance.start()">Start</mbsc-button>
+        </td>
+        <td id="space">
+        </td>
+        <td>
+          <div id="stop" class="mbsc-btn-group-justified" style="width: 100px;">
+          <mbsc-button (click)="showCoords($event); myPopup.instance.lap();">Stop</mbsc-button>
+          </div>
+        </td>
+    </tr>
+    </table>
+    <table id="laps"></table>
+</mbsc-page>
+<div id="demo" style="display:none;"></div>
