@@ -29,7 +29,7 @@
             theme: 'ios',              // Specify theme like: theme: 'ios' or omit setting to use default
             themeVariant: 'dark',         // More info about themeVariant: https://docs.mobiscroll.com/4-10-9/angular/timer#opt-themeVariant
             display: 'inline',         // Specify display mode like: display: 'bottom' or omit setting to use default
-            step: 0.001,                // More info about step: https://docs.mobiscroll.com/4-10-9/angular/timer#opt-step
+            step: 0.01,                // More info about step: https://docs.mobiscroll.com/4-10-9/angular/timer#opt-step
             rows: 3,                   // More info about rows: https://docs.mobiscroll.com/4-10-9/angular/timer#opt-rows
             mode: 'stopwatch',     // More info about mode: https://docs.mobiscroll.com/4-10-9/angular/timer#opt-mode
             buttons: [],
@@ -39,17 +39,17 @@
                 var A: string[];
                 A = ['200', '100', '50', '300', '500', '600', '300', '200'];
                 const button = document.getElementById('stop');
-                button.style.width = W[lapsNr-1] + 'px;';
+                button.setAttribute('style', 'width: ' + W[lapsNr-1] + 'px;');
                 const space = document.getElementById('space');
-                space.style.width = A[lapsNr-1] + 'px;';
+                space.setAttribute('style', 'width: ' + A[lapsNr-1] + 'px;');
             },
             onReset: (event, inst) => {
                 if(lapsNr > 8){
                   inst.hide();
                   const button = document.getElementById('stop');
-                  button.style.display = 'none;';
+                  button.setAttribute('style', 'display: none;');
                   const start = document.getElementById('start');
-                  start.style.display = 'none;';
+                  start.setAttribute('style', 'display: none;');
                 }
             },
             onLap: (event, inst) => {  // More info about onLap: https://docs.mobiscroll.com/4-10-9/angular/timer#event-onLap
