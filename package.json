@@ -2,7 +2,7 @@
   "name": "demo",
   "version": "1.0.0",
   "scripts": {
-    "heroku-postbuild":"node --max_old_space_size=8000 ./node_modules/@angular/cli/bin/ng build --prod && npm install -g http-server-spa",
+    "heroku-postbuild":"node --max_old_space_size=4096 ./node_modules/@angular/cli/bin/ng serve",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
