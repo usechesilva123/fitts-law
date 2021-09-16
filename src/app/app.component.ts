@@ -35,9 +35,9 @@
             buttons: [],
             onStart: (event, inst) => {
                 var W: string[];
-                W = ['100', '300', '250', '300', '150', '200', '300', '100'];
+                W = ['100', '300', '250', '300', '100', '300', '250', '300'];
                 var A: string[];
-                A = ['200', '100', '50', '300', '500', '600', '300', '200'];
+                A = ['200', '100', '150', '300', '200', '100', '150', '300'];
                 const button = document.getElementById('stop');
                 button.setAttribute('style', 'width: ' + W[lapsNr-1] + 'px;');
                 const space = document.getElementById('space');
